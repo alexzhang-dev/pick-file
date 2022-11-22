@@ -1,3 +1,5 @@
+use std::path::PathBuf;
+
 pub trait Parse {
-    fn init_rule(&self);
+    fn parse_rule(&self) -> PathBuf;
 }

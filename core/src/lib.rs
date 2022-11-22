@@ -1,5 +1,4 @@
-mod managers;
-mod patterns;
-mod structs;
+pub mod helpers;
+pub mod patterns;
 mod traits;
 mod utils;

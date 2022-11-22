@@ -1,12 +1,11 @@
+use std::path::PathBuf;
+
+use self::glob::Glob;
+use crate::utils::path::normalize_path;
 pub mod glob;
 
-#[cfg(test)]
-pub mod test {
-    use super::glob::Glob;
-
-    #[test]
-    pub fn glob_test() {
-        let glob = Glob::new("**/**/mod".to_string());
-        assert_eq!(glob.get(), vec!['1'.to_string()]);
-    }
+pub fn glob_sync(pattern: String) -> Vec<PathBuf> {
+    let pattern = normalize_path(&pattern).expect("cannot normalize pattern");
+    let glob = Glob::new(pattern);
+    return glob.get();
 }
