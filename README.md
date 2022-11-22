@@ -1,8 +1,8 @@
 # Pick-File
 
-Traverse local files by some specific rules.
+Collect essential utilities for file operating.
 
-## Glob
+## Glob Pattern(not release yet)
 
 ### Usage
 
@@ -12,3 +12,7 @@ fn main() {
     glob.pick(); // returns Vec<PathBuf>
 }
 ```
+
+## is-glob
+
+[Doc](./is-glob/README.md)
